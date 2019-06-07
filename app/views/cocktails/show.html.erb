@@ -1,0 +1,17 @@
+<!-- show.html.erb
+ -->
+<p> <%= @cocktail.name %> </p>
+<% @cocktail.doses.each do |dose| %>
+<p> <%= dose.description %> </p>
+<p> <%= dose.ingredient.name %> <%= link_to "Delete dose", cocktail_dose_path(@cocktail,dose.id),
+      method: :delete,
+      data: { confirm: "Are you sure?"}, class: "btn btn-danger" %> </p>
+<% end %>
+
+
+<%= link_to "Add dose", new_cocktail_dose_path(@cocktail), class: "btn btn-success"%>
+
+
+
+
+

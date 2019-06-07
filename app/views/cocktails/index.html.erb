@@ -1,0 +1,14 @@
+<h1>Cocktails#index</h1>
+<p> <%= link_to "Add cocktail", new_cocktail_path, class: "btn btn-success"%> </p>
+
+<% @cocktails.each do |cocktail| %>
+  <h2> <%= cocktail.name %> </h2>
+  <%= link_to "See details/ Add ingredients", cocktail_path(cocktail), class: "btn btn-primary"%>
+  <%= link_to "Delete cocktail", cocktail_path(cocktail),
+      method: :delete,
+      data: { confirm: "Are you sure?"}, class: "btn btn-danger" %>
+<% end %>
+
+
+
+
