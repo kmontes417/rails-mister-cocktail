@@ -35,6 +35,6 @@ class DosesController < ApplicationController
   def dose_params
     # *Strong params*: You need to *whitelist* what can be updated by the user
     # Never trust user data!
-    params.require(:dose).permit(:description)
+    params.require(:dose).permit(:description, :photo)
   end
 end
