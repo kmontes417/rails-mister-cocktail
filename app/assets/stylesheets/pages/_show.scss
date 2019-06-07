@@ -1,6 +1,12 @@
 // // _show.scss
 
-.dose-delete {
+.dose-desc {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  padding: 5px 7px;
+}
+
+.add-button-container {
+  padding: 10px 15px;
 }

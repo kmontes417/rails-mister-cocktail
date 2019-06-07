@@ -1,14 +1,9 @@
 // _button.scss
-
-.btn-danger {
-  margin-left: 15px;
-  font-size: .75rem;
+.delete-button {
+  font-size: 10px;
+  background-color: orange;
+  color: white;
+  padding: 3px 5px;
+  border-radius: 5px;
 }
 
-.btn-success-1 {
-  margin-top: 5px;
-}
-
-.buttons {
-  font-size: .5rem;
-}
