@@ -1,15 +1,36 @@
 <!-- show.html.erb
- -->
-<p> <%= @cocktail.name %> </p>
-<% @cocktail.doses.each do |dose| %>
-<p> <%= dose.description %> </p>
-<p> <%= dose.ingredient.name %> <%= link_to "Delete dose", cocktail_dose_path(@cocktail,dose.id),
-      method: :delete,
-      data: { confirm: "Are you sure?"}, class: "btn btn-danger" %> </p>
+-->
+
+<div class="cards-2">
+  <div class="card-title text-center"></div>
+
+  <% @cocktail.doses.each do |dose| %>
+
+  <div class="card-trip">
+    <h1> <%= @cocktail.name %> </h1>
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+    <div class="card-trip-infos">
+      <div>
+        <div>
+          <div class="dose-delete">
+            <div> <%= dose.description %> <%= dose.ingredient.name %></div>
+            <div> <%= link_to "Delete dose", cocktail_dose_path(@cocktail,dose.id),
+              method: :delete,
+              data: { confirm: "Are you sure?"}, class: "btn btn-danger" %>
+            </div>
+        </div>
+
+      </div>
+
+        <div> <%= link_to "Add dose", new_cocktail_dose_path(@cocktail), class: "btn btn-success"%> </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <% end %>
-
-
-<%= link_to "Add dose", new_cocktail_dose_path(@cocktail), class: "btn btn-success"%>
+</div>
 
 
 
